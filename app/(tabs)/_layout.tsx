@@ -27,24 +27,24 @@ export default function TabLayout() {
         }),
       }}>
       <Tabs.Screen
-        name="index"
+        name="home"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <Ionicons name="home" size={32} color={color} />,
+          tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? "home-sharp" : "home-outline"} size={32} color={color} />,
         }}
       />
       <Tabs.Screen
         name="game"
         options={{
           title: 'Game',
-          tabBarIcon: ({ color }) => <Ionicons name="game-controller" size={32} color={color} />,
+          tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? "game-controller-sharp" : "game-controller-outline"} size={32} color={color} />,
         }}
       />
       <Tabs.Screen
         name="score"
         options={{
           title: 'Score',
-          tabBarIcon: ({ color }) => <Ionicons name="trophy" size={32} color={color} />,
+          tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? "trophy-sharp" : "trophy-outline"} size={32} color={color} />,
         }}
       />
     </Tabs>
